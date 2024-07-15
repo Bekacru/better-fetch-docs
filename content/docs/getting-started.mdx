@@ -18,9 +18,11 @@ npm i zod
 
 ### Quick Start
 
-The easiest way to start using better fetch is to import the `betterFetch` function and start making requests.
+The fastest way to start using better fetch is to import the `betterFetch` function and start making requests and define the response type using generics or output **zod schema (recommended)**.
 
-```ts twoslash title="Using Generic Type"
+1. Using generics
+
+```ts twoslash title="with-generics.ts"
 import { betterFetch } from '@better-fetch/fetch';
 
 //Using generic type
@@ -32,7 +34,9 @@ const { data, error } = await betterFetch<{
 }>("https://jsonplaceholder.typicode.com/todos/1");
 ```
 
-```ts twoslash title="Using Zod Schema"
+2. Using zod schema
+
+```ts twoslash title="with-zod.ts"
 import { betterFetch } from '@better-fetch/fetch';
 import { z } from 'zod';
 
