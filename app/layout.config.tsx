@@ -17,6 +17,9 @@ export const baseOptions: BaseLayoutProps = {
 export const docsOptions: DocsLayoutProps = {
   ...baseOptions,
   tree: pageTree,
+  nav: {
+    title: "Better Fetch",
+  },
   sidebar: {
     collapsible: false,
     footer: (

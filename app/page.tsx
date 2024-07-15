@@ -14,9 +14,6 @@ export default function HomePage() {
 
       <Ripple />
       <div className='z-10 flex flex-col items-center justify-center'>
-        <div className='rounded-full my-2 w-max bg-gradient-to-tr py-[3px] from-stone-700 to-orange-800 text-sm px-4'>
-          📰 Better Fetch version 1.0.0 is out!
-        </div>
         <h1 className="mb-4 text-5xl font-bold text-center">
           Better Fetch
         </h1>
