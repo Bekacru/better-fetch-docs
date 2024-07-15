@@ -7,7 +7,7 @@ export function createMetadata(override: Metadata): Metadata {
             title: override.title ?? undefined,
             description: override.description ?? undefined,
             url: 'https://better-fetch.vercel.app',
-            images: '/banner.png',
+            images: 'https://better-fetch.vercel.app/banner.png',
             siteName: 'Better Fetch',
             ...override.openGraph,
         },
@@ -16,7 +16,7 @@ export function createMetadata(override: Metadata): Metadata {
             creator: '@beakcru',
             title: override.title ?? undefined,
             description: override.description ?? undefined,
-            images: '/banner.png',
+            images: 'https://better-fetch.vercel.app/banner.png',
             ...override.twitter,
         },
     };
