@@ -28,10 +28,12 @@ export default function HomePage() {
               Docs
             </Button>
           </Link>
-          <Button className='flex gap-2' variant="secondary">
-            <Icons.github />
-            Github
-          </Button>
+          <Link href="https://github.com/bekacru/better-fetch">
+            <Button className='flex gap-2' variant="secondary">
+              <Icons.github />
+              Github
+            </Button>
+          </Link>
         </div>
       </div>
       <div>
