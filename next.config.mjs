@@ -10,7 +10,14 @@ const withMDX = createMDX({
         transformerTwoslash(),
       ],
     },
-    remarkPlugins: [remarkInstall],
+    remarkPlugins: [
+      [
+        remarkInstall, {
+          persist: {
+            id: 'persist-install',
+          },
+        },]
+    ],
   },
 });
 
