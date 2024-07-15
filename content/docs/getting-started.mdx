@@ -18,7 +18,9 @@ npm i zod
 
 ### Quick Start
 
-The fastest way to start using better fetch is to import the `betterFetch` function and start making requests and define the response type using generics or output **zod schema (recommended)**.
+The fastest way to start using better fetch is to import the `betterFetch` function and start making requests.
+
+You can define the response type using generics or **zod schema (recommended)**.
 
 1. Using generics
 
@@ -60,7 +62,7 @@ Better fetch by default returns a `Promise` that resolves to an object of `data`
 You can define the type of the response data in 2 ways:
 1. **Using the `output` property to define a zod schema (recommended)**: The `output` property is used to define the type of the response data. The response data will be validated against the schema. If the response data does not match the schema, an error will be thrown.
 
-2. **By passing a generic type to the `betterFetch`**: You can also pass a generic type to the `betterFetch` function. This is useful when you want to define the type of the response data in a single place.
+2. **By passing a generic type to the `betterFetch`**: You can also pass a generic type to the `betterFetch` function. It has some drawbacks but it should work in most cases.
 
 ### Create Fetch
 
