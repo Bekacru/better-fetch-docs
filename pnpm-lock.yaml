@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@better-fetch/fetch':
-        specifier: 0.0.5-beta.16
-        version: 0.0.5-beta.16
+        specifier: 1.0.1-beta.7
+        version: 1.0.1-beta.7
       '@radix-ui/react-icons':
         specifier: ^1.3.0
         version: 1.3.0(react@18.3.1)
@@ -102,8 +102,8 @@ packages:
     resolution: {integrity: sha512-5F7SDGs1T72ZczbRwbGO9lQi0NLjQxzl6i4lJxLxfW9U5UluCSyEJeniWvnhl3/euNiqQVbo8zruhsDfid0esA==}
     engines: {node: '>=6.9.0'}
 
-  '@better-fetch/fetch@0.0.5-beta.16':
-    resolution: {integrity: sha512-8u1ygIAFUjU3FX3y2Epl2pjKoMg7pNvfA5jc0JKXgogAWwgQdjHCerssLAI1efjtXVPx1tLKUzej6eFHwJ6GHg==}
+  '@better-fetch/fetch@1.0.1-beta.7':
+    resolution: {integrity: sha512-pqzDVRbnxlLCDW5zbEMFM9fdAx6FAgo7VHEjkBqVEE3m4Hhmwhoz1fEH3Lw6q+wYXbRFQlzyFQnV0yGhNAN3aw==}
 
   '@floating-ui/core@1.6.4':
     resolution: {integrity: sha512-a4IowK4QkXl4SCWTGUR0INAfEOX3wtsYw3rKK5InQEHMGObkR8Xk44qYQD9P4r6HHw0iIfK6GUKECmY8sTkqRA==}
@@ -2049,7 +2049,7 @@ snapshots:
     dependencies:
       regenerator-runtime: 0.14.1
 
-  '@better-fetch/fetch@0.0.5-beta.16': {}
+  '@better-fetch/fetch@1.0.1-beta.7': {}
 
   '@floating-ui/core@1.6.4':
     dependencies:

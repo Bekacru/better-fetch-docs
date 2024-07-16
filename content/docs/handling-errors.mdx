@@ -41,14 +41,13 @@ If you pass a custom error type, it will override the default error type except 
 
 If you prefer to throw errors instead of returning them, you can use the `throw` option.
 
-When you pass the `throw` option, the `betterFetch` function will throw an error instead of returning it.
+When you pass the `throw` option, the `betterFetch` function will throw an error. And instead of returning `data` and `error` object it'll only the response data as it is.
 
-```ts twoslash title="Using Generic Type"
+```ts twoslash title="fetch.ts"
 import { betterFetch } from '@better-fetch/fetch';
 import { z } from 'zod';
 
-//@errors: 2339
-const { data, error } = await betterFetch("https://jsonplaceholder.typicode.com/todos/1", {
+const data = await betterFetch("https://jsonplaceholder.typicode.com/todos/1", {
     throw: true, // [!code highlight]
     output: z.object({  
         userId: z.string(),
@@ -57,6 +56,7 @@ const { data, error } = await betterFetch("https://jsonplaceholder.typicode.com/
         completed: z.boolean(),
     }),
 });
+
 ```
 
 ## Inferring Response When Using Generics and `throw` Option
@@ -78,9 +78,8 @@ export const $fetch = createFetch({
   throw: true,
 }); 
 
-//@errors: 2339
-// @error: error is no longer defined
-const { data, error } = await $fetch<{
+
+const data = await $fetch<{
   userId: number;
   id: number;
   title: string;
@@ -94,9 +93,7 @@ const { data, error } = await $fetch<{
 import { betterFetch } from '@better-fetch/fetch';
 import { z } from 'zod';
 
-//@errors: 2339
-// @error: error is no longer defined
-const { data, error } = await betterFetch<{
+const data = await betterFetch<{
     userId: number;
     id: number;
     title: string;

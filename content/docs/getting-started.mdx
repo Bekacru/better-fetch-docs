@@ -90,5 +90,26 @@ const { data, error } = await $fetch<{
   completed: boolean;
 }>("/todos/1");
 ```
-
 You can pass more options see the [Fetch Options](/docs/fetch-options) section for more details.
+
+### Throwing Errors
+
+You can throw errors instead of returning them by passing the `throw` option.
+
+If you pass the `throw` option, the `betterFetch` function will throw an error. And instead of returning `data` and `error` object it'll only the response data as it is.
+
+```ts twoslash title="fetch.ts"
+import { createFetch } from '@better-fetch/fetch';
+import { z } from 'zod';
+
+const $fetch = createFetch({
+    baseUrl: "https://jsonplaceholder.typicode.com",
+    throw: true,
+});
+
+const data = await $fetch<{
+    userId: number;
+}>("https://jsonplaceholder.typicode.com/todos/1");
+```
+Learn more about handling errors [Handling Errors](/docs/handling-errors) section.
+
