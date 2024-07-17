@@ -8,7 +8,7 @@ Currently, supports `Bearer` and `Basic` authorization.
 
 ### Bearer
 
-The bearer authorization is used to add a bearer token to the request. The token is added to the `Authorization` header.
+The bearer authorization is used to add a bearer token to the request. The token is added to the `Authorization` header. 
 
 ```ts twoslash title="fetch.ts"
 import { createFetch } from "@better-fetch/fetch";
@@ -21,6 +21,24 @@ const $fetch = createFetch({
     },
 })
 ```
+
+You can also pass a function that returns a promise that resolves to a string.
+
+```ts twoslash title="fetch.ts"
+import { createFetch } from "@better-fetch/fetch";
+
+const $fetch = createFetch({
+    baseURL: "http://localhost:3000",
+    auth: {
+        type: "Bearer",
+        token: () => authStore.getToken(),
+    },
+})
+```
+
+<Callout type="info">
+    The function will be called only once when the request is made. If it returns undefined, the header will not be added to the request.
+</Callout>
 
 ### Basic
 
